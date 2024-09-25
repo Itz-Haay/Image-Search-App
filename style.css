@@ -1,0 +1,140 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+#search-input {
+    width: 60%;
+    max-width: 400px;
+    margin: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    font-size: 18px;
+    color: #333;
+    cursor: text;
+}
+
+#search-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #4caf50;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    transform: translateY(-2px);
+}
+
+#search-button:active {
+    transform: translateY(1px);
+}
+
+.search-results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.search-results-card {
+    margin-bottom: 60px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 30%;
+}
+
+.search-results-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.search-results-card:hover img {
+    transform: scale(1.05);
+}
+
+.search-results-card a {
+    padding: 10px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-results-card:hover a {
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+#show-more-btn {
+    padding: 20px 20px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #008cba;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#show-more-btn:hover {
+    background-color: #008caa;
+    transform: translateY(-2px);
+}
+
+#show-more-btn:active {
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    .search-results-card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-results-card {
+        width: 60%;
+    }
+
+    #search-input {
+        width: 80%;
+    }
+
+    form {
+        flex-direction: column;
+    }
+    
+}
